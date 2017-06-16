@@ -4,6 +4,15 @@
     <a md-button [routerLink]="['/home']" routerLinkActive="active">
         <md-icon class="md-18|md-24|md-36|md-48">home</md-icon>
     </a>
+    <button md-button [mdMenuTriggerFor]="moenchMenu">
+        Trigger
+    </button>
+    
+    <md-menu #moenchMenu="mdMenu">
+        <button md-menu-item *ngFor="let item of items" (click)="">
+            item
+        </button>
+    </md-menu>
     <a md-button [routerLink]="['/signin']" routerLinkActive="active">Sign in</a>
 </md-toolbar>
 <md-card>

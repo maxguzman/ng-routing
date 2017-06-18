@@ -1,6 +1,6 @@
 <md-toolbar color="primary">
-    <span>Angular Routing</span>
-    <span fxFlex></span>
+    <span fxHide.xs>Angular Routing</span>
+    <span fxHide.xs fxFlex></span>
     <a md-button [routerLink]="['/home']" routerLinkActive="active">
         <md-icon class="md-18|md-24|md-36|md-48">home</md-icon>
     </a>
@@ -13,6 +13,8 @@
     </md-menu>
     <a md-button [routerLink]="['/signin']" routerLinkActive="active">Sign in</a>
 </md-toolbar>
-<md-card>
-    <router-outlet></router-outlet>
-</md-card>
+<div fxLayoutAlign="center center">
+    <md-card class="container">
+        <router-outlet></router-outlet>
+    </md-card>
+</div>

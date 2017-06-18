@@ -9,6 +9,7 @@ import { ActivatedRoute, Params } from "@angular/router";
 export class MoenchComponent implements OnInit, OnDestroy {
 
   message = 'Welcome to Moench';
+  imageURL = '../assets/images/moench100.png';
 
   constructor(private route: ActivatedRoute) { }
 
@@ -17,6 +18,7 @@ export class MoenchComponent implements OnInit, OnDestroy {
     this.route.params.subscribe( (routeParams: Params) => { 
         const floor = routeParams['floor'];
         this.message = `Moench ${floor}`;
+        this.imageURL = `../assets/images/moench${floor}.png`;
      })
   }
 
